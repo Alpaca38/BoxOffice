@@ -14,6 +14,11 @@
 		D1957F942C10695A0080E2FF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D1957F932C10695A0080E2FF /* Base */; };
 		D1957F9C2C1069F50080E2FF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D1957F9B2C1069F50080E2FF /* .gitignore */; };
 		D1957F9E2C106A0A0080E2FF /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957F9D2C106A0A0080E2FF /* APIKey.swift */; };
+		D1957FA12C106AAD0080E2FF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D1957FA02C106AAD0080E2FF /* SnapKit */; };
+		D1957FA42C106ABD0080E2FF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D1957FA32C106ABD0080E2FF /* Alamofire */; };
+		D1957FA72C10790A0080E2FF /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957FA62C10790A0080E2FF /* MovieData.swift */; };
+		D1957FA92C1079B20080E2FF /* DailyBoxOfficeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957FA82C1079B20080E2FF /* DailyBoxOfficeTableViewCell.swift */; };
+		D1957FAB2C107AD00080E2FF /* ReusableIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957FAA2C107AD00080E2FF /* ReusableIdentifierProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,9 @@
 		D1957F952C10695A0080E2FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1957F9B2C1069F50080E2FF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D1957F9D2C106A0A0080E2FF /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		D1957FA62C10790A0080E2FF /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
+		D1957FA82C1079B20080E2FF /* DailyBoxOfficeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBoxOfficeTableViewCell.swift; sourceTree = "<group>"; };
+		D1957FAA2C107AD00080E2FF /* ReusableIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifierProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1957FA12C106AAD0080E2FF /* SnapKit in Frameworks */,
+				D1957FA42C106ABD0080E2FF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +69,7 @@
 		D1957F862C1069590080E2FF /* BoxOffice */ = {
 			isa = PBXGroup;
 			children = (
+				D1957FA52C1078FC0080E2FF /* Model */,
 				D1957F872C1069590080E2FF /* AppDelegate.swift */,
 				D1957F892C1069590080E2FF /* SceneDelegate.swift */,
 				D1957F8B2C1069590080E2FF /* ViewController.swift */,
@@ -66,8 +77,18 @@
 				D1957F922C10695A0080E2FF /* LaunchScreen.storyboard */,
 				D1957F952C10695A0080E2FF /* Info.plist */,
 				D1957F9D2C106A0A0080E2FF /* APIKey.swift */,
+				D1957FA82C1079B20080E2FF /* DailyBoxOfficeTableViewCell.swift */,
+				D1957FAA2C107AD00080E2FF /* ReusableIdentifierProtocol.swift */,
 			);
 			path = BoxOffice;
+			sourceTree = "<group>";
+		};
+		D1957FA52C1078FC0080E2FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1957FA62C10790A0080E2FF /* MovieData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +107,10 @@
 			dependencies = (
 			);
 			name = BoxOffice;
+			packageProductDependencies = (
+				D1957FA02C106AAD0080E2FF /* SnapKit */,
+				D1957FA32C106ABD0080E2FF /* Alamofire */,
+			);
 			productName = BoxOffice;
 			productReference = D1957F842C1069590080E2FF /* BoxOffice.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +139,10 @@
 				Base,
 			);
 			mainGroup = D1957F7B2C1069590080E2FF;
+			packageReferences = (
+				D1957F9F2C106AAD0080E2FF /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D1957FA22C106ABD0080E2FF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = D1957F852C1069590080E2FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,9 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1957FAB2C107AD00080E2FF /* ReusableIdentifierProtocol.swift in Sources */,
 				D1957F8C2C1069590080E2FF /* ViewController.swift in Sources */,
 				D1957F882C1069590080E2FF /* AppDelegate.swift in Sources */,
 				D1957F9E2C106A0A0080E2FF /* APIKey.swift in Sources */,
+				D1957FA92C1079B20080E2FF /* DailyBoxOfficeTableViewCell.swift in Sources */,
+				D1957FA72C10790A0080E2FF /* MovieData.swift in Sources */,
 				D1957F8A2C1069590080E2FF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +397,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D1957F9F2C106AAD0080E2FF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		D1957FA22C106ABD0080E2FF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1957FA02C106AAD0080E2FF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1957F9F2C106AAD0080E2FF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		D1957FA32C106ABD0080E2FF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1957FA22C106ABD0080E2FF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D1957F7C2C1069590080E2FF /* Project object */;
 }
